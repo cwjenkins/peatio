@@ -9,11 +9,11 @@ end
 Peatio::Application.routes.draw do
   use_doorkeeper
 
-  root 'welcome#index'
+   root 'welcome#index' 
 
-  if Rails.env.development?
+#  if Rails.env.development?
     mount MailsViewer::Engine => '/mails'
-  end
+#  end
 
   get '/signin' => 'sessions#new', :as => :signin
   get '/signup' => 'identities#new', :as => :signup
@@ -123,5 +123,4 @@ Peatio::Application.routes.draw do
   draw :admin
 
   mount APIv2::Mount => APIv2::Mount::PREFIX
-
 end

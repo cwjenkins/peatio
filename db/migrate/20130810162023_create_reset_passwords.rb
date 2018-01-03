@@ -1,4 +1,4 @@
-class CreateResetPasswords < ActiveRecord::Migration
+class CreateResetPasswords < ActiveRecord::Migration[5.1]
   def change
     create_table :reset_passwords do |t|
       t.string :email

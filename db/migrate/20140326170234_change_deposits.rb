@@ -1,4 +1,4 @@
-class ChangeDeposits < ActiveRecord::Migration
+class ChangeDeposits < ActiveRecord::Migration[5.1]
   def change
     rename_column :deposits, :address, :fund_source_uid
     rename_column :deposits, :address_label, :fund_source_extra

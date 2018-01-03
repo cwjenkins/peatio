@@ -1,4 +1,4 @@
-class AddTypeToWithdraws < ActiveRecord::Migration
+class AddTypeToWithdraws < ActiveRecord::Migration[5.1]
   def up
     add_column :withdraws, :type, :string
 

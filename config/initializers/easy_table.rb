@@ -15,7 +15,7 @@ module EasyTable
         column_without_custom(title, label_or_opts, opts, &block)
       end
 
-      alias_method_chain :column, :custom  
+      #alias_method_chain :column, :custom  
     end
 
     module Base
@@ -29,7 +29,7 @@ module EasyTable
         end
       end
 
-      alias_method_chain :translate, :custom  
+      #alias_method_chain :translate, :custom  
     end
   end
 end

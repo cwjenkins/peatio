@@ -1,4 +1,4 @@
-class ChangeToEnumerizeInOrders < ActiveRecord::Migration
+class ChangeToEnumerizeInOrders < ActiveRecord::Migration[5.1]
   def up
     change_column :orders, :bid, :integer
     change_column :orders, :ask, :integer

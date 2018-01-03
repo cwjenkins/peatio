@@ -1,4 +1,4 @@
-class CreateDocumentsTranslations < ActiveRecord::Migration
+class CreateDocumentsTranslations < ActiveRecord::Migration[5.1]
   def up
     Document.create_translation_table!(
       { :title => :string, :body => :text },

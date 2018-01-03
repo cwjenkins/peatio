@@ -1,4 +1,4 @@
-class DropResetPasswords < ActiveRecord::Migration
+class DropResetPasswords < ActiveRecord::Migration[5.1]
   def up
     if ActiveRecord::Base.connection.table_exists? :reset_passwords
       drop_table :reset_passwords

@@ -1,4 +1,4 @@
-class ChangeToEnumerizeInAccountVersions < ActiveRecord::Migration
+class ChangeToEnumerizeInAccountVersions < ActiveRecord::Migration[5.1]
   def up
     change_column :account_versions, :reason, :integer
 

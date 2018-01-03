@@ -19,7 +19,7 @@ class TwoFactor < ActiveRecord::Base
       return if not SUBCLASS.include?(type.to_s)
 
       klass = "two_factor/#{type}".camelize.constantize
-      klass.find_or_create_by(type: klass.name)
+      klass.where(type: klass.name).first_or_create
     end
 
     def activated?
@@ -53,7 +53,7 @@ class TwoFactor < ActiveRecord::Base
 
   def gen_code
     msg = "#{self.class.name}#gen_code is not implemented."
-    raise NotImplementedError.new(msg)
+#    raise NotImplementedError.new(msg + caller.join(' '))
   end
 
   def send_notification

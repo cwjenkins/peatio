@@ -1,4 +1,4 @@
-class RenameIdentityIdToMemberId < ActiveRecord::Migration
+class RenameIdentityIdToMemberId < ActiveRecord::Migration[5.1]
   def change
     change_table :tokens do |t|
       t.rename :identity_id, :member_id

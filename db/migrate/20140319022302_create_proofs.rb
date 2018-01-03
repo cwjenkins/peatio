@@ -1,4 +1,4 @@
-class CreateProofs < ActiveRecord::Migration
+class CreateProofs < ActiveRecord::Migration[5.1]
   def change
     create_table :proofs do |t|
       t.string  :root

@@ -1,4 +1,4 @@
-class AddDescAndKeywordToDocuments < ActiveRecord::Migration
+class AddDescAndKeywordToDocuments < ActiveRecord::Migration[5.1]
   def change
     add_column :documents, :desc, :text
     add_column :documents, :keywords, :text

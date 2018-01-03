@@ -1,4 +1,4 @@
-class AddActivatedToMembers < ActiveRecord::Migration
+class AddActivatedToMembers < ActiveRecord::Migration[5.1]
   def change
     add_column :members, :activated, :boolean
   end

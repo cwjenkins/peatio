@@ -1,4 +1,4 @@
-class CreatePartialTrees < ActiveRecord::Migration
+class CreatePartialTrees < ActiveRecord::Migration[5.1]
   def up
     create_table :partial_trees do |t|
       t.integer :proof_id, null: false

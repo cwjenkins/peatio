@@ -1,12 +1,12 @@
 ADMIN_EMAIL = 'admin@peatio.dev'
 ADMIN_PASSWORD = 'Pass@word8'
 
-admin_identity = Identity.find_or_create_by(email: ADMIN_EMAIL)
+admin_identity = Identity.where(email: ADMIN_EMAIL).first_or_create
 admin_identity.password = admin_identity.password_confirmation = ADMIN_PASSWORD
 admin_identity.is_active = true
 admin_identity.save!
 
-admin_member = Member.find_or_create_by(email: ADMIN_EMAIL)
+admin_member = Member.where(email: ADMIN_EMAIL).first_or_create
 admin_member.authentications.build(provider: 'identity', uid: admin_identity.id)
 admin_member.save!
 

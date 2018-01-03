@@ -1,4 +1,4 @@
-class ChangeToEnumerizeInPaymentTransactions < ActiveRecord::Migration
+class ChangeToEnumerizeInPaymentTransactions < ActiveRecord::Migration[5.1]
   def up
     change_column :payment_transactions, :state, :integer
   end

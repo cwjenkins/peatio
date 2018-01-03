@@ -70,7 +70,7 @@ class SessionsController < ApplicationController
   end
 
   def auth_hash
-    @auth_hash ||= env["omniauth.auth"]
+    @auth_hash ||= request.env["omniauth.auth"]
   end
 
   def add_auth_for_weibo

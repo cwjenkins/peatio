@@ -1,4 +1,4 @@
-class DropResetPins < ActiveRecord::Migration
+class DropResetPins < ActiveRecord::Migration[5.1]
   def up
     drop_table :reset_pins
   end

@@ -9,8 +9,7 @@
         a = t('.cny-assets')
 
     - if current_user
-      div data-scroll-index=0 = render 'liability_proof'
+      / div data-scroll-index=0 = render 'liability_proof'
 
-    div data-scroll-index=1 = render 'btc_assets'
+    div data-scroll-index=1 = render 'btc_assets', btc_proof: @btc_proof
     div data-scroll-index=2 = render 'cny_assets'
-

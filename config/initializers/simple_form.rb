@@ -172,6 +172,6 @@ module SimpleForm
       end
     end
 
-    alias_method_chain :lookup_model_names, :custom_scope
+#    alias_method_chain :lookup_model_names, :custom_scope
   end
 end

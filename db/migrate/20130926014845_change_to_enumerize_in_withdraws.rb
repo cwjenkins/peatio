@@ -1,4 +1,4 @@
-class ChangeToEnumerizeInWithdraws < ActiveRecord::Migration
+class ChangeToEnumerizeInWithdraws < ActiveRecord::Migration[5.1]
   def up
     change_column :withdraws, :payment_way, :integer
     change_column :withdraws, :state, :integer

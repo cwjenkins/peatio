@@ -1,4 +1,4 @@
-class RenameAddressColumnByWithdraws < ActiveRecord::Migration
+class RenameAddressColumnByWithdraws < ActiveRecord::Migration[5.1]
   def change
     add_column :fund_sources, :member_id, :integer, :after => :id
     add_column :fund_sources, :currency, :integer, :after => :member_id

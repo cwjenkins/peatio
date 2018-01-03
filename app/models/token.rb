@@ -16,7 +16,7 @@ class Token < ActiveRecord::Base
     end
 
     def for_member(member)
-      token = find_or_create_by(member_id: member.id, is_used: false)
+      token = where(member_id: member.id, is_used: false).first_or_create
 
       if token.expired?
         token = create(member_id: member.id)

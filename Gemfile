@@ -80,7 +80,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'mails_viewer'
+  gem 'mails_viewer', git: 'https://github.com/cwjenkins/mails_viewer.git'
   gem 'timecop'
   gem 'dotenv-rails'
   gem 'rspec-rails'
